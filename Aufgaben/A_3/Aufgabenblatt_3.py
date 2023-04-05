@@ -127,11 +127,11 @@ while True:
     start = input("Would you like to register a vehicle? (Y/N): ")
     if start.lower() == "n":
         # create CSV
+        print("generating csv files...")
         df.to_csv("vehicle_registration_from_dict.csv")
         df2 = pd.DataFrame(vehicle_list_2, columns=headers)
         df2.to_csv("vehicle_registration_from_list.csv")
-        print("----------df-----------")
-        print(df2)
+        print("done")
         break
     if start.lower() == "y":
         vehicle_type = input("What kind of Vehicle is it? (Car, Motorbike, Truck, unspecified): ")
