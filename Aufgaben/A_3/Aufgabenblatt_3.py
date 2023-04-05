@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 print("----------------------")
-print("Aufgabe 11 - Klassen und Attribute")
+print("Aufgabe 11 - Klassen und Attribute + Aufgabe 12 - Methoden")
 print("----------------------")
 
 
@@ -26,24 +26,16 @@ class Vehicle:
         self.number_of_tyres = number_of_tyres
         self.power = f"{power} PS"
 
+    def tyres(self):
+        print(f"The {self.color} {self.brand} needs {self.number_of_tyres} tyres")
 
-print("----------------------")
-print("Aufgabe 12 - Methoden")
-print("----------------------")
-
-
-def tyres(self):
-    print(f"The {self.brand} needs {self.number_of_tyres} tyres")
-
-
-def con_year(self):
-    print(f"The {self.color} {self.brand} was built in {self.construction_year}")
+    def con_year(self):
+        print(f"The {self.color} {self.brand} was built in {self.construction_year}")
 
 
 print("----------------------")
 print("Aufgabe 13 - Objekte und Instanzen")
 print("----------------------")
-
 
 vehicles = []
 
@@ -66,20 +58,11 @@ def create_vehicles(num_of_vehicles):
         vehicles.append([new_vehicle.color, new_vehicle.brand, new_vehicle.construction_year,
                          new_vehicle.number_of_tyres, new_vehicle.power])
 
-        # print(new_vehicle.color)
-        # print(new_vehicle.brand)
-        # print(new_vehicle.construction_year)
-        # print(new_vehicle.number_of_tyres)
-        # print(new_vehicle.power)
-        # print("---------------")
     return vehicles
 
 
 vehicle_list = create_vehicles(12)
-
-
 print(*vehicle_list, sep="\n")
-
 
 print("----------------------")
 print("Aufgabe 14 - Vererbung")
@@ -94,6 +77,9 @@ class Car(Vehicle):
         self.warranty = warranty
         super().__init__(color, brand, construction_year, number_of_tyres, power)
 
+    def warranty_check(self):
+        print(f"Warranty Status of the {self.color} {self.brand} is: {self.warranty}")
+
 
 class Motorbike(Vehicle):
     def __init__(self, color, brand, construction_year, number_of_tyres, power,
@@ -102,6 +88,12 @@ class Motorbike(Vehicle):
         self.bodykit = bodykit
         self.exhaust_type = exhaust_type
         super().__init__(color, brand, construction_year, number_of_tyres, power)
+
+    def exhaust(self):
+        if self.exhaust_type.lower() != "standard":
+            print(f"The {self.color} {self.brand} has a modified exhaust, type: {self.exhaust_type}")
+        else:
+            print(f"The {self.color} {self.brand} has a standard exhaust.")
 
 
 class Truck(Vehicle):
@@ -112,46 +104,34 @@ class Truck(Vehicle):
         self.special_permit = special_permit
         super().__init__(color, brand, construction_year, number_of_tyres, power)
 
+    def permit(self):
+        print(f"To be allowed to drive this Vehicle, Special Permit: {self.special_permit} is needed.")
 
-"""
-some = Truck("blue", "volvo", 1988, 18, 2500, 20, 7500, "g56n")
-another = Motorbike("blue", "Suzuki", 1988, 2, 276, 2, "racer", "standard")
-
-print("Hanger Length:", some.hanger_length)
-print("Number of tyres:", some.number_of_tyres)
-print("Capacity:", some.load_capacity)
-print(some.usecase)
-
-print("--------------------")
-print("Mirrors:", another.num_of_mirrors)
-print("Number of tyres:", another.number_of_tyres)
-print("Bodykit:", another.bodykit)
-print(another.usecase)
-
-"""
 
 print("----------------------")
 print("Aufgabe 15 - Objekte und Dateneingabe")
 print("----------------------")
+# solution includes csv from list, and csv from dictionary
 
 headers = ["color", "brand", "construction_year", "number_of_tyres", "power",
            "num_of_doors", "num_of_seats", "warranty",
            "num_of_mirrors", "bodykit", "exhaust",
            "hanger_length", "load_capacity", "special_permit"]
-df = pd.DataFrame(columns=headers)
 
-df2 = df.copy()
+df = pd.DataFrame(columns=headers)
+# df2 = df.copy()
 
 counter = 0
 vehicle_list_2 = []
 while True:
     start = input("Would you like to register a vehicle? (Y/N): ")
     if start.lower() == "n":
-        df.to_csv("vehicle_registration.csv")
-        df3 = pd.DataFrame(vehicle_list_2, columns=headers)
-        df3.to_csv("vehicle_registration_2.csv")
+        # create CSV
+        df.to_csv("vehicle_registration_from_dict.csv")
+        df2 = pd.DataFrame(vehicle_list_2, columns=headers)
+        df2.to_csv("vehicle_registration_from_list.csv")
         print("----------df-----------")
-        print(df3)
+        print(df2)
         break
     if start.lower() == "y":
         vehicle_type = input("What kind of Vehicle is it? (Car, Motorbike, Truck, unspecified): ")
@@ -225,11 +205,8 @@ while True:
              },
             index=[counter]
         )
-
+    # solution with Data Frame, new entries will be added here
     df = pd.concat([df, new_entry])
-    # df2 = df.loc[len(df2)] = vehicle_list_2
 
     counter += 1
     print(*vehicle_list_2, sep="\n")
-
-
