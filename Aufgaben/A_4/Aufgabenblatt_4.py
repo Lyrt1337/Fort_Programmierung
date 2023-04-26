@@ -1,6 +1,6 @@
 """
 -------------------------
-Aufgabenblatt_3.py Fort.Prog
+Aufgabenblatt_4.py Fort.Prog
 Autor: Christian Gilomen
 Datum: 20.04.2023
 -------------------------
@@ -56,9 +56,10 @@ def connect(path1, path2):
         res = read_data + " " + read_data2
         ff.write(res)
     print("- New File generated -")
+    print("- concat.txt -")
 
 
-connect("some.txt", "some2.txt")
+connect("some.txt", "another.txt")
 
 
 print("----------------------")
@@ -121,6 +122,8 @@ for x in range(width):
 
 # save resulting image
 img_data.save("img_out.png", format="png")
+print("- New image was created -")
+print("- img_out.png -")
 
 
 print("----------------------")
@@ -138,11 +141,12 @@ def mergeImages(path1, path2):
                 img2.putpixel((x * 2, y), img1.getpixel((x * 2, y)))
             else:
                 img2.putpixel((x * 2 - 1, y), img1.getpixel((x * 2 - 1, y)))
-    img2.save("result.png", format="png")
+    img2.save("merge.png", format="png")
 
 
 path_1 = "sunset.jpg"
 path_2 = "tiger.jpg"
 mergeImages(path_1, path_2)
 
-print("done")
+print("- New image was created -")
+print("- merge.png -")
