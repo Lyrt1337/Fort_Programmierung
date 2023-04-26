@@ -1,55 +1,53 @@
-import numpy as np
 from PIL import Image
-import matplotlib.pyplot as plt
-import matplotlib.image as img
 import random as rnd
+def countColors(path):
+    img = Image.open(path)
+    # listing pixels
+    all_pixels = []
+    w, h = img.size
+    for k in range(w):
+        for m in range(h):
+            pixel = img.getpixel((k, m))
+            all_pixels.append(pixel)
+    num_of_pixels = len(all_pixels)
+    max_colors = num_of_pixels
+    # number of Pixels: 65536
 
+    # list of all unique colors with ranking
+    ranking = img.getcolors(max_colors)
+
+    # save pixels in pixels.txt
+    with open("pixels.txt", "w") as b:
+        b.write(str(ranking))
+    return ranking, img
+
+
+# set path and call function countColors
 imgPath = "test.jpg"
-
-rgb_data = img.imread(imgPath)
-picture = Image.open(imgPath)
-uniqueColors = []
-
-w, h = picture.size
-for x in range(w):
-    for y in range(h):
-        pixel = picture.getpixel((x, y))
-        uniqueColors.append(pixel)
-
-totalUniqueColors = len(uniqueColors)
-
-# print("Unique colors: ", totalUniqueColors)
-
-max_colors = totalUniqueColors
-all_colors = picture.getcolors(max_colors)
-
-# ranking of all colors
-list1 = []
-for i in all_colors:
-    list1.append(i[0])
-    list1.sort(reverse=True)
+colors_ranked, img_data = countColors(imgPath)
 
 # find top10
-list2 = list1[0:10]
-# print(list2)
-top_colors = []
-for i in all_colors:
-    if i[0] in list2:
-        top_colors.append(i[1])
+# all colors without ranking, sorted
+all_colors = []
+for i in colors_ranked:
+    all_colors.append(i[0])
+    all_colors.sort(reverse=True)
 
-top_colors = np.array(top_colors)
-print("colors: ", top_colors)
-print("unique len:", range(len(uniqueColors)))
-# switching pixels for top10
-pixuls = []
+# top10 colors
+top_ten_ranking = all_colors[0:10]
+top_ten_colors = []
+for i in colors_ranked:
+    if i[0] in top_ten_ranking:
+        top_ten_colors.append(i[1])
 
-new_pic = []
-# print(range(len(rgb_data[:, :, 1])))
-# for j in range(0, 3):
-#     for i in range(len(rgb_data[0])):
-#         if rgb_data[j, i] not in top_colors:
-#             new_pic[j, i] = rnd.choice(top_colors)
+# replace all pixels not in top10
+width, height = img_data.size
+for x in range(width):
+    for y in range(height):
+        curr_pixel = img_data.getpixel((x, y))
+        if curr_pixel not in top_ten_colors:
+            img_data.putpixel((x, y), rnd.choice(top_ten_colors))
 
-
-plt.imshow(new_pic)
-plt.show()
+# save resulting image
+img_data.save("img_out.png", format="png")
+print(dir(img_data))
