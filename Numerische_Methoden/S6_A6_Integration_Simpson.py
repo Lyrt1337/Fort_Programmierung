@@ -1,5 +1,5 @@
 # Python initialisieren :
-import scipy . integrate as ig
+import scipy.integrate as ig
 import numpy as np
 # Parameter :
 x_0 = 0

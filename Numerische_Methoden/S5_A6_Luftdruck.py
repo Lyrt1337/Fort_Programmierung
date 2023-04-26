@@ -1,5 +1,5 @@
 # Python initialisieren :
-import matplotlib . pyplot as pl
+import matplotlib.pyplot as pl
 import numpy as np
 # Parameter :
 h_PB = 4049.

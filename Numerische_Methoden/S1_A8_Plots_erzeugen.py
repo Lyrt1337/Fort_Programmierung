@@ -1,6 +1,6 @@
 # Python initialisieren :
 import numpy as np
-import matplotlib . pyplot as pl
+import matplotlib.pyplot as pl
 # Python konfigurieren :
 pl.close ("all")
 pl.rcParams["figure.figsize"] = (7.03, 15)
