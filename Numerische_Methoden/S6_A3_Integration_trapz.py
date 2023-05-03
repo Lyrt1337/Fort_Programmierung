@@ -1,8 +1,8 @@
 # Python initialisieren :
 import numpy as np
 # Parameter :
-x_0 = 0
-x_E = 2
+x_0 = -4
+x_E = 4
 n = 10
 N = 201
 pr = 6
@@ -10,7 +10,7 @@ pr = 6
 
 # Funktionen :
 def f(x):
-    y = np.sqrt(x + np.sin(x))
+    y = (np.cosh(2 * x) / (1 + x ** 4)) * np.exp(-x**2/2)
     return y
 
 
