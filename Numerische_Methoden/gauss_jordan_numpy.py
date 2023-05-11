@@ -4,9 +4,11 @@ import numpy as np
 G = np.array([[2, 1, 0, 2, 6], [4, 2, 3, 3, 16], [-2, -1, 6, -4, 2],
               [-8, -4, 9, -11, -12], [2, 1, -3, 3, 2]])
 pr = 3
+
+
 # Funktionen
-def LGLS_rref(G, tol = -1):
-# Berechnungen
+def LGLS_rref(G, tol=-1):
+    # Berechnungen
     n_Z = G.shape[0]
     n_S = G.shape[1]
     if tol < 0:
@@ -41,28 +43,30 @@ def LGLS_rref(G, tol = -1):
                 H[ii][es] = 0.0
                 for jj in range(es + 1, n_S):
                     H[ii][jj] = H[ii][jj] - q * H[ez][jj]
-                    n_R = n_R + 1
-                    pz = np.append(pz, ez)
-                    ps = np.append(ps, es)
-                    if ez == m_Z:
-                        break
-                    ez = ez + 1
-                else:
-                    for ii in range(ez, n_Z):
-                        H[ii][es] = 0.0
-            # Stufenform reduzieren :
-            for kk in range(n_R - 1, -1, -1):
-                ez = pz[kk] 
-                es = ps[kk]
-                # Elimination rueckwaerts :
-                for ii in range(ez - 1, -1, -1):
-                    q = H[ii][es]
-                    H[ii][es] = 0.0
-                    for jj in range(es + 1, n_S):
-                        H[ii][jj] = H[ii][jj] - q * H[ez][jj]
-            return H
+            n_R = n_R + 1
+            pz = np.append(pz, ez)
+            ps = np.append(ps, es)
+            if ez == m_Z:
+                break
+            ez = ez + 1
+        else:
+            for ii in range(ez, n_Z):
+                H[ii][es] = 0.0
+    # Stufenform reduzieren :
+    for kk in range(n_R - 1, -1, -1):
+        ez = pz[kk]
+        es = ps[kk]
+        # Elimination rueckwaerts :
+        for ii in range(ez - 1, -1, -1):
+            q = H[ii][es]
+            H[ii][es] = 0.0
+            for jj in range(es + 1, n_S):
+                H[ii][jj] = H[ii][jj] - q * H[ez][jj]
+    return H
+
+
 # Berechnungen :
-H= LGLS_rref (G)
+H = LGLS_rref(G)
 # Ausgabe :
 print(f"G = \n{np.array2string(G, precision = pr)}")
 print(f"H = \n{np.array2string(H, precision = pr)}")
