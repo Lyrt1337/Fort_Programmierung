@@ -1,0 +1,6 @@
+/dataset/dblp.*
+/dataset/dblp.dtd
+*.xml
+*.csv
+*.txt
+.idea/*
