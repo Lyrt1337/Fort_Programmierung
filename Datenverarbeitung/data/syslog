@@ -1,0 +1,983 @@
+Apr 17 06:44:53 bs1-lab kernel: Linux version 5.10.0-8-amd64 (debian-kernel@lists.debian.org) (gcc-10 (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1 SMP Debian 5.10.46-5 (2021-09-23)
+Apr 17 06:44:53 bs1-lab kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-5.10.0-8-amd64 root=UUID=1f61f5be-81fb-4a02-933d-989be3bb93de ro quiet
+Apr 17 06:44:53 bs1-lab kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Apr 17 06:44:53 bs1-lab kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Apr 17 06:44:53 bs1-lab kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Apr 17 06:44:53 bs1-lab kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Apr 17 06:44:53 bs1-lab kernel: x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Apr 17 06:44:53 bs1-lab kernel: BIOS-provided physical RAM map:
+Apr 17 06:44:53 bs1-lab kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Apr 17 06:44:53 bs1-lab kernel: BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Apr 17 06:44:53 bs1-lab kernel: BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Apr 17 06:44:53 bs1-lab kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
+Apr 17 06:44:53 bs1-lab kernel: BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+Apr 17 06:44:53 bs1-lab kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Apr 17 06:44:53 bs1-lab kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Apr 17 06:44:53 bs1-lab kernel: BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Apr 17 06:44:53 bs1-lab kernel: BIOS-e820: [mem 0x0000000100000000-0x000000011fffffff] usable
+Apr 17 06:44:53 bs1-lab kernel: NX (Execute Disable) protection: active
+Apr 17 06:44:53 bs1-lab kernel: SMBIOS 2.5 present.
+Apr 17 06:44:53 bs1-lab kernel: DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Apr 17 06:44:53 bs1-lab kernel: Hypervisor detected: KVM
+Apr 17 06:44:53 bs1-lab kernel: kvm-clock: Using msrs 4b564d01 and 4b564d00
+Apr 17 06:44:53 bs1-lab kernel: kvm-clock: cpu 0, msr 6fab3001, primary cpu clock
+Apr 17 06:44:53 bs1-lab kernel: kvm-clock: using sched offset of 6944251374 cycles
+Apr 17 06:44:53 bs1-lab kernel: clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Apr 17 06:44:53 bs1-lab kernel: tsc: Detected 1896.002 MHz processor
+Apr 17 06:44:53 bs1-lab kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Apr 17 06:44:53 bs1-lab kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+Apr 17 06:44:53 bs1-lab kernel: last_pfn = 0x120000 max_arch_pfn = 0x400000000
+Apr 17 06:44:53 bs1-lab kernel: MTRR default type: uncachable
+Apr 17 06:44:53 bs1-lab kernel: MTRR variable ranges disabled:
+Apr 17 06:44:53 bs1-lab kernel: Disabled
+Apr 17 06:44:53 bs1-lab kernel: x86/PAT: MTRRs disabled, skipping PAT initialization too.
+Apr 17 06:44:53 bs1-lab kernel: CPU MTRRs all blank - virtualized system.
+Apr 17 06:44:53 bs1-lab kernel: x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+Apr 17 06:44:53 bs1-lab kernel: last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
+Apr 17 06:44:53 bs1-lab kernel: found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+Apr 17 06:44:53 bs1-lab kernel: RAMDISK: [mem 0x32ef5000-0x35771fff]
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Early table checksum verification disabled
+Apr 17 06:44:53 bs1-lab kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Apr 17 06:44:53 bs1-lab kernel: ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: DSDT 0x00000000DFFF0470 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: FACS 0x00000000DFFF0200 000040
+Apr 17 06:44:53 bs1-lab kernel: ACPI: FACS 0x00000000DFFF0200 000040
+Apr 17 06:44:53 bs1-lab kernel: ACPI: APIC 0x00000000DFFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Reserving DSDT table memory at [mem 0xdfff0470-0xdfff2794]
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff0293]
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Reserving SSDT table memory at [mem 0xdfff02a0-0xdfff046b]
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Local APIC address 0xfee00000
+Apr 17 06:44:53 bs1-lab kernel: No NUMA configuration found
+Apr 17 06:44:53 bs1-lab kernel: Faking a node at [mem 0x0000000000000000-0x000000011fffffff]
+Apr 17 06:44:53 bs1-lab kernel: NODE_DATA(0) allocated [mem 0x11ffd2000-0x11fffbfff]
+Apr 17 06:44:53 bs1-lab kernel: Zone ranges:
+Apr 17 06:44:53 bs1-lab kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Apr 17 06:44:53 bs1-lab kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+Apr 17 06:44:53 bs1-lab kernel:   Normal   [mem 0x0000000100000000-0x000000011fffffff]
+Apr 17 06:44:53 bs1-lab kernel:   Device   empty
+Apr 17 06:44:53 bs1-lab kernel: Movable zone start for each node
+Apr 17 06:44:53 bs1-lab kernel: Early memory node ranges
+Apr 17 06:44:53 bs1-lab kernel:   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Apr 17 06:44:53 bs1-lab kernel:   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
+Apr 17 06:44:53 bs1-lab kernel:   node   0: [mem 0x0000000100000000-0x000000011fffffff]
+Apr 17 06:44:53 bs1-lab kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000011fffffff]
+Apr 17 06:44:53 bs1-lab kernel: On node 0 totalpages: 1048462
+Apr 17 06:44:53 bs1-lab kernel:   DMA zone: 64 pages used for memmap
+Apr 17 06:44:53 bs1-lab kernel:   DMA zone: 21 pages reserved
+Apr 17 06:44:53 bs1-lab kernel:   DMA zone: 3998 pages, LIFO batch:0
+Apr 17 06:44:53 bs1-lab kernel:   DMA zone: 28770 pages in unavailable ranges
+Apr 17 06:44:53 bs1-lab kernel:   DMA32 zone: 14272 pages used for memmap
+Apr 17 06:44:53 bs1-lab kernel:   DMA32 zone: 913392 pages, LIFO batch:63
+Apr 17 06:44:53 bs1-lab kernel:   DMA32 zone: 16 pages in unavailable ranges
+Apr 17 06:44:53 bs1-lab kernel:   Normal zone: 2048 pages used for memmap
+Apr 17 06:44:53 bs1-lab kernel:   Normal zone: 131072 pages, LIFO batch:31
+Apr 17 06:44:53 bs1-lab kernel: ACPI: PM-Timer IO Port: 0x4008
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Local APIC address 0xfee00000
+Apr 17 06:44:53 bs1-lab kernel: IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+Apr 17 06:44:53 bs1-lab kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: IRQ0 used by override.
+Apr 17 06:44:53 bs1-lab kernel: ACPI: IRQ9 used by override.
+Apr 17 06:44:53 bs1-lab kernel: Using ACPI (MADT) for SMP configuration information
+Apr 17 06:44:53 bs1-lab kernel: smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
+Apr 17 06:44:53 bs1-lab kernel: PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+Apr 17 06:44:53 bs1-lab kernel: [mem 0xe0000000-0xfebfffff] available for PCI devices
+Apr 17 06:44:53 bs1-lab kernel: Booting paravirtualized kernel on KVM
+Apr 17 06:44:53 bs1-lab kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+Apr 17 06:44:53 bs1-lab kernel: setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+Apr 17 06:44:53 bs1-lab kernel: percpu: Embedded 54 pages/cpu s183960 r8192 d29032 u2097152
+Apr 17 06:44:53 bs1-lab kernel: pcpu-alloc: s183960 r8192 d29032 u2097152 alloc=1*2097152
+Apr 17 06:44:53 bs1-lab kernel: pcpu-alloc: [0] 0 
+Apr 17 06:44:53 bs1-lab kernel: kvm-guest: PV spinlocks disabled, single CPU
+Apr 17 06:44:53 bs1-lab kernel: Built 1 zonelists, mobility grouping on.  Total pages: 1032057
+Apr 17 06:44:53 bs1-lab kernel: Policy zone: Normal
+Apr 17 06:44:53 bs1-lab kernel: Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.10.0-8-amd64 root=UUID=1f61f5be-81fb-4a02-933d-989be3bb93de ro quiet
+Apr 17 06:44:53 bs1-lab kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: mem auto-init: stack:off, heap alloc:on, heap free:off
+Apr 17 06:44:53 bs1-lab kernel: Memory: 3658424K/4193848K available (12295K kernel code, 2544K rwdata, 7552K rodata, 2396K init, 3700K bss, 214484K reserved, 0K cma-reserved)
+Apr 17 06:44:53 bs1-lab kernel: random: get_random_u64 called from __kmem_cache_create+0x2a/0x540 with crng_init=0
+Apr 17 06:44:53 bs1-lab kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Apr 17 06:44:53 bs1-lab kernel: ftrace: allocating 36396 entries in 143 pages
+Apr 17 06:44:53 bs1-lab kernel: ftrace: allocated 143 pages with 5 groups
+Apr 17 06:44:53 bs1-lab kernel: rcu: Hierarchical RCU implementation.
+Apr 17 06:44:53 bs1-lab kernel: rcu:         RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+Apr 17 06:44:53 bs1-lab kernel:         Rude variant of Tasks RCU enabled.
+Apr 17 06:44:53 bs1-lab kernel:         Tracing variant of Tasks RCU enabled.
+Apr 17 06:44:53 bs1-lab kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+Apr 17 06:44:53 bs1-lab kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+Apr 17 06:44:53 bs1-lab kernel: NR_IRQS: 524544, nr_irqs: 256, preallocated irqs: 16
+Apr 17 06:44:53 bs1-lab kernel: random: crng done (trusting CPU's manufacturer)
+Apr 17 06:44:53 bs1-lab kernel: Console: colour VGA+ 80x25
+Apr 17 06:44:53 bs1-lab kernel: printk: console [tty0] enabled
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Core revision 20200925
+Apr 17 06:44:53 bs1-lab kernel: APIC: Switch to symmetric I/O mode setup
+Apr 17 06:44:53 bs1-lab kernel: x2apic enabled
+Apr 17 06:44:53 bs1-lab kernel: Switched APIC routing to physical x2apic.
+Apr 17 06:44:53 bs1-lab kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Apr 17 06:44:53 bs1-lab kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x36a8d617cd5, max_idle_ns: 881590553509 ns
+Apr 17 06:44:53 bs1-lab kernel: Calibrating delay loop (skipped) preset value.. 3792.00 BogoMIPS (lpj=7584008)
+Apr 17 06:44:53 bs1-lab kernel: pid_max: default: 32768 minimum: 301
+Apr 17 06:44:53 bs1-lab kernel: LSM: Security Framework initializing
+Apr 17 06:44:53 bs1-lab kernel: Yama: disabled by default; enable with sysctl kernel.yama.*
+Apr 17 06:44:53 bs1-lab kernel: AppArmor: AppArmor initialized
+Apr 17 06:44:53 bs1-lab kernel: TOMOYO Linux initialized
+Apr 17 06:44:53 bs1-lab kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: process: using mwait in idle threads
+Apr 17 06:44:53 bs1-lab kernel: Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+Apr 17 06:44:53 bs1-lab kernel: Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+Apr 17 06:44:53 bs1-lab kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Apr 17 06:44:53 bs1-lab kernel: Spectre V2 : Mitigation: Full generic retpoline
+Apr 17 06:44:53 bs1-lab kernel: Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Apr 17 06:44:53 bs1-lab kernel: Speculative Store Bypass: Vulnerable
+Apr 17 06:44:53 bs1-lab kernel: TAA: Mitigation: TSX disabled
+Apr 17 06:44:53 bs1-lab kernel: SRBDS: Mitigation: TSX disabled
+Apr 17 06:44:53 bs1-lab kernel: Freeing SMP alternatives memory: 32K
+Apr 17 06:44:53 bs1-lab kernel: smpboot: CPU0: Intel(R) Core(TM) i5-8365U CPU @ 1.60GHz (family: 0x6, model: 0x8e, stepping: 0xc)
+Apr 17 06:44:53 bs1-lab kernel: Performance Events: unsupported p6 CPU model 142 no PMU driver, software events only.
+Apr 17 06:44:53 bs1-lab kernel: rcu: Hierarchical SRCU implementation.
+Apr 17 06:44:53 bs1-lab kernel: NMI watchdog: Perf NMI watchdog permanently disabled
+Apr 17 06:44:53 bs1-lab kernel: smp: Bringing up secondary CPUs ...
+Apr 17 06:44:53 bs1-lab kernel: smp: Brought up 1 node, 1 CPU
+Apr 17 06:44:53 bs1-lab kernel: smpboot: Max logical packages: 1
+Apr 17 06:44:53 bs1-lab kernel: smpboot: Total of 1 processors activated (3792.00 BogoMIPS)
+Apr 17 06:44:53 bs1-lab kernel: node 0 deferred pages initialised in 8ms
+Apr 17 06:44:53 bs1-lab kernel: devtmpfs: initialized
+Apr 17 06:44:53 bs1-lab kernel: x86/mm: Memory block size: 128MB
+Apr 17 06:44:53 bs1-lab kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Apr 17 06:44:53 bs1-lab kernel: futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: pinctrl core: initialized pinctrl subsystem
+Apr 17 06:44:53 bs1-lab kernel: NET: Registered protocol family 16
+Apr 17 06:44:53 bs1-lab kernel: audit: initializing netlink subsys (disabled)
+Apr 17 06:44:53 bs1-lab kernel: thermal_sys: Registered thermal governor 'fair_share'
+Apr 17 06:44:53 bs1-lab kernel: thermal_sys: Registered thermal governor 'bang_bang'
+Apr 17 06:44:53 bs1-lab kernel: thermal_sys: Registered thermal governor 'step_wise'
+Apr 17 06:44:53 bs1-lab kernel: thermal_sys: Registered thermal governor 'user_space'
+Apr 17 06:44:53 bs1-lab kernel: thermal_sys: Registered thermal governor 'power_allocator'
+Apr 17 06:44:53 bs1-lab kernel: cpuidle: using governor ladder
+Apr 17 06:44:53 bs1-lab kernel: cpuidle: using governor menu
+Apr 17 06:44:53 bs1-lab kernel: ACPI: bus type PCI registered
+Apr 17 06:44:53 bs1-lab kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Apr 17 06:44:53 bs1-lab kernel: PCI: Using configuration type 1 for base access
+Apr 17 06:44:53 bs1-lab kernel: Kprobes globally optimized
+Apr 17 06:44:53 bs1-lab kernel: audit: type=2000 audit(1650170698.614:1): state=initialized audit_enabled=0 res=1
+Apr 17 06:44:53 bs1-lab kernel: HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Added _OSI(Module Device)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Added _OSI(Processor Device)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Added _OSI(Linux-Dell-Video)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Interpreter enabled
+Apr 17 06:44:53 bs1-lab kernel: ACPI: (supports S0 S5)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Using IOAPIC for interrupt routing
+Apr 17 06:44:53 bs1-lab kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+Apr 17 06:44:53 bs1-lab kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Apr 17 06:44:53 bs1-lab kernel: acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+Apr 17 06:44:53 bs1-lab kernel: acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+Apr 17 06:44:53 bs1-lab kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Apr 17 06:44:53 bs1-lab kernel: PCI host bridge to bus 0000:00
+Apr 17 06:44:53 bs1-lab kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Apr 17 06:44:53 bs1-lab kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Apr 17 06:44:53 bs1-lab kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Apr 17 06:44:53 bs1-lab kernel: pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+Apr 17 06:44:53 bs1-lab kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe0ffffff pref]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:03.0: reg 0x10: [mem 0xf0200000-0xf021ffff]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:03.0: reg 0x18: [io  0xd020-0xd027]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:0b.0: [8086:265c] type 00 class 0x0c0320
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:0b.0: reg 0x10: [mem 0xf0805000-0xf0805fff]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
+Apr 17 06:44:53 bs1-lab kernel: ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+Apr 17 06:44:53 bs1-lab kernel: iommu: Default domain type: Translated 
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:02.0: vgaarb: bridge control possible
+Apr 17 06:44:53 bs1-lab kernel: vgaarb: loaded
+Apr 17 06:44:53 bs1-lab kernel: EDAC MC: Ver: 3.0.0
+Apr 17 06:44:53 bs1-lab kernel: NetLabel: Initializing
+Apr 17 06:44:53 bs1-lab kernel: NetLabel:  domain hash size = 128
+Apr 17 06:44:53 bs1-lab kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Apr 17 06:44:53 bs1-lab kernel: NetLabel:  unlabeled traffic allowed by default
+Apr 17 06:44:53 bs1-lab kernel: PCI: Using ACPI for IRQ routing
+Apr 17 06:44:53 bs1-lab kernel: PCI: pci_cache_line_size set to 64 bytes
+Apr 17 06:44:53 bs1-lab kernel: e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Apr 17 06:44:53 bs1-lab kernel: e820: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
+Apr 17 06:44:53 bs1-lab kernel: clocksource: Switched to clocksource kvm-clock
+Apr 17 06:44:53 bs1-lab kernel: VFS: Disk quotas dquot_6.6.0
+Apr 17 06:44:53 bs1-lab kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Apr 17 06:44:53 bs1-lab kernel: AppArmor: AppArmor Filesystem Enabled
+Apr 17 06:44:53 bs1-lab kernel: pnp: PnP ACPI init
+Apr 17 06:44:53 bs1-lab kernel: pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+Apr 17 06:44:53 bs1-lab kernel: pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+Apr 17 06:44:53 bs1-lab kernel: pnp: PnP ACPI: found 2 devices
+Apr 17 06:44:53 bs1-lab kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Apr 17 06:44:53 bs1-lab kernel: NET: Registered protocol family 2
+Apr 17 06:44:53 bs1-lab kernel: IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: TCP: Hash tables configured (established 32768 bind 32768)
+Apr 17 06:44:53 bs1-lab kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Apr 17 06:44:53 bs1-lab kernel: NET: Registered protocol family 1
+Apr 17 06:44:53 bs1-lab kernel: NET: Registered protocol family 44
+Apr 17 06:44:53 bs1-lab kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Apr 17 06:44:53 bs1-lab kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Apr 17 06:44:53 bs1-lab kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Apr 17 06:44:53 bs1-lab kernel: pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Apr 17 06:44:53 bs1-lab kernel: pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Apr 17 06:44:53 bs1-lab kernel: PCI: CLS 0 bytes, default 64
+Apr 17 06:44:53 bs1-lab kernel: Trying to unpack rootfs image as initramfs...
+Apr 17 06:44:53 bs1-lab kernel: Freeing initrd memory: 41460K
+Apr 17 06:44:53 bs1-lab kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Apr 17 06:44:53 bs1-lab kernel: software IO TLB: mapped [mem 0x00000000dbff0000-0x00000000dfff0000] (64MB)
+Apr 17 06:44:53 bs1-lab kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x36a8d617cd5, max_idle_ns: 881590553509 ns
+Apr 17 06:44:53 bs1-lab kernel: clocksource: Switched to clocksource tsc
+Apr 17 06:44:53 bs1-lab kernel: platform rtc_cmos: registered platform RTC device (no PNP device found)
+Apr 17 06:44:53 bs1-lab kernel: Initialise system trusted keyrings
+Apr 17 06:44:53 bs1-lab kernel: Key type blacklist registered
+Apr 17 06:44:53 bs1-lab kernel: workingset: timestamp_bits=36 max_order=20 bucket_order=0
+Apr 17 06:44:53 bs1-lab kernel: zbud: loaded
+Apr 17 06:44:53 bs1-lab kernel: integrity: Platform Keyring initialized
+Apr 17 06:44:53 bs1-lab kernel: Key type asymmetric registered
+Apr 17 06:44:53 bs1-lab kernel: Asymmetric key parser 'x509' registered
+Apr 17 06:44:53 bs1-lab kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+Apr 17 06:44:53 bs1-lab kernel: io scheduler mq-deadline registered
+Apr 17 06:44:53 bs1-lab kernel: shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+Apr 17 06:44:53 bs1-lab kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Apr 17 06:44:53 bs1-lab kernel: Linux agpgart interface v0.103
+Apr 17 06:44:53 bs1-lab kernel: AMD-Vi: AMD IOMMUv2 driver by Joerg Roedel <jroedel@suse.de>
+Apr 17 06:44:53 bs1-lab kernel: AMD-Vi: AMD IOMMUv2 functionality not available on this system
+Apr 17 06:44:53 bs1-lab kernel: i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Apr 17 06:44:53 bs1-lab kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Apr 17 06:44:53 bs1-lab kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Apr 17 06:44:53 bs1-lab kernel: mousedev: PS/2 mouse device common for all mice
+Apr 17 06:44:53 bs1-lab kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+Apr 17 06:44:53 bs1-lab kernel: rtc_cmos rtc_cmos: registered as rtc0
+Apr 17 06:44:53 bs1-lab kernel: rtc_cmos rtc_cmos: setting system clock to 2022-04-17T04:44:51 UTC (1650170691)
+Apr 17 06:44:53 bs1-lab kernel: rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Apr 17 06:44:53 bs1-lab kernel: intel_pstate: CPU model not supported
+Apr 17 06:44:53 bs1-lab kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Apr 17 06:44:53 bs1-lab kernel: NET: Registered protocol family 10
+Apr 17 06:44:53 bs1-lab kernel: Segment Routing with IPv6
+Apr 17 06:44:53 bs1-lab kernel: mip6: Mobile IPv6
+Apr 17 06:44:53 bs1-lab kernel: NET: Registered protocol family 17
+Apr 17 06:44:53 bs1-lab kernel: mpls_gso: MPLS GSO support
+Apr 17 06:44:53 bs1-lab kernel: IPI shorthand broadcast: enabled
+Apr 17 06:44:53 bs1-lab kernel: sched_clock: Marking stable (1420856783, 9795853)->(1434656139, -4003503)
+Apr 17 06:44:53 bs1-lab kernel: registered taskstats version 1
+Apr 17 06:44:53 bs1-lab kernel: Loading compiled-in X.509 certificates
+Apr 17 06:44:53 bs1-lab kernel: Loaded X.509 cert 'Debian Secure Boot CA: 6ccece7e4c6c0d1f6149f3dd27dfcc5cbb419ea1'
+Apr 17 06:44:53 bs1-lab kernel: Loaded X.509 cert 'Debian Secure Boot Signer 2021 - linux: 4b6ef5abca669825178e052c84667ccbc0531f8c'
+Apr 17 06:44:53 bs1-lab kernel: zswap: loaded using pool lzo/zbud
+Apr 17 06:44:53 bs1-lab kernel: Key type ._fscrypt registered
+Apr 17 06:44:53 bs1-lab kernel: Key type .fscrypt registered
+Apr 17 06:44:53 bs1-lab kernel: Key type fscrypt-provisioning registered
+Apr 17 06:44:53 bs1-lab kernel: AppArmor: AppArmor sha1 policy hashing enabled
+Apr 17 06:44:53 bs1-lab kernel: Freeing unused kernel image (initmem) memory: 2396K
+Apr 17 06:44:53 bs1-lab kernel: Write protecting the kernel read-only data: 22528k
+Apr 17 06:44:53 bs1-lab kernel: Freeing unused kernel image (text/rodata gap) memory: 2040K
+Apr 17 06:44:53 bs1-lab kernel: Freeing unused kernel image (rodata/data gap) memory: 640K
+Apr 17 06:44:53 bs1-lab kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Apr 17 06:44:53 bs1-lab kernel: Run /init as init process
+Apr 17 06:44:53 bs1-lab kernel:   with arguments:
+Apr 17 06:44:53 bs1-lab kernel:     /init
+Apr 17 06:44:53 bs1-lab kernel:   with environment:
+Apr 17 06:44:53 bs1-lab kernel:     HOME=/
+Apr 17 06:44:53 bs1-lab kernel:     TERM=linux
+Apr 17 06:44:53 bs1-lab kernel:     BOOT_IMAGE=/boot/vmlinuz-5.10.0-8-amd64
+Apr 17 06:44:53 bs1-lab kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Apr 17 06:44:53 bs1-lab kernel: input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input3
+Apr 17 06:44:53 bs1-lab kernel: battery: ACPI: Battery Slot [BAT0] (battery present)
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Power Button [PWRF]
+Apr 17 06:44:53 bs1-lab kernel: input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input4
+Apr 17 06:44:53 bs1-lab kernel: ACPI: Sleep Button [SLPF]
+Apr 17 06:44:53 bs1-lab kernel: piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+Apr 17 06:44:53 bs1-lab kernel: e1000: Intel(R) PRO/1000 Network Driver
+Apr 17 06:44:53 bs1-lab kernel: e1000: Copyright (c) 1999-2006 Intel Corporation.
+Apr 17 06:44:53 bs1-lab kernel: SCSI subsystem initialized
+Apr 17 06:44:53 bs1-lab kernel: ACPI: bus type USB registered
+Apr 17 06:44:53 bs1-lab kernel: usbcore: registered new interface driver usbfs
+Apr 17 06:44:53 bs1-lab kernel: usbcore: registered new interface driver hub
+Apr 17 06:44:53 bs1-lab kernel: usbcore: registered new device driver usb
+Apr 17 06:44:53 bs1-lab kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Apr 17 06:44:53 bs1-lab kernel: ehci-pci: EHCI PCI platform driver
+Apr 17 06:44:53 bs1-lab kernel: ehci-pci 0000:00:0b.0: EHCI Host Controller
+Apr 17 06:44:53 bs1-lab kernel: ehci-pci 0000:00:0b.0: new USB bus registered, assigned bus number 1
+Apr 17 06:44:53 bs1-lab kernel: ehci-pci 0000:00:0b.0: irq 19, io mem 0xf0805000
+Apr 17 06:44:53 bs1-lab kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Apr 17 06:44:53 bs1-lab kernel: libata version 3.00 loaded.
+Apr 17 06:44:53 bs1-lab kernel: ehci-pci 0000:00:0b.0: USB 2.0 started, EHCI 1.00
+Apr 17 06:44:53 bs1-lab kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+Apr 17 06:44:53 bs1-lab kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 17 06:44:53 bs1-lab kernel: usb usb1: Product: EHCI Host Controller
+Apr 17 06:44:53 bs1-lab kernel: usb usb1: Manufacturer: Linux 5.10.0-8-amd64 ehci_hcd
+Apr 17 06:44:53 bs1-lab kernel: usb usb1: SerialNumber: 0000:00:0b.0
+Apr 17 06:44:53 bs1-lab kernel: hub 1-0:1.0: USB hub found
+Apr 17 06:44:53 bs1-lab kernel: hub 1-0:1.0: 12 ports detected
+Apr 17 06:44:53 bs1-lab kernel: ohci-pci: OHCI PCI platform driver
+Apr 17 06:44:53 bs1-lab kernel: ohci-pci 0000:00:06.0: OHCI PCI host controller
+Apr 17 06:44:53 bs1-lab kernel: ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 2
+Apr 17 06:44:53 bs1-lab kernel: ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+Apr 17 06:44:53 bs1-lab kernel: ahci 0000:00:0d.0: version 3.0
+Apr 17 06:44:53 bs1-lab kernel: ata_piix 0000:00:01.1: version 2.13
+Apr 17 06:44:53 bs1-lab kernel: ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Apr 17 06:44:53 bs1-lab kernel: ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+Apr 17 06:44:53 bs1-lab kernel: ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Apr 17 06:44:53 bs1-lab kernel: scsi host0: ata_piix
+Apr 17 06:44:53 bs1-lab kernel: scsi host1: ahci
+Apr 17 06:44:53 bs1-lab kernel: ata3: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+Apr 17 06:44:53 bs1-lab kernel: scsi host2: ata_piix
+Apr 17 06:44:53 bs1-lab kernel: ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+Apr 17 06:44:53 bs1-lab kernel: ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+Apr 17 06:44:53 bs1-lab kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.10
+Apr 17 06:44:53 bs1-lab kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 17 06:44:53 bs1-lab kernel: usb usb2: Product: OHCI PCI host controller
+Apr 17 06:44:53 bs1-lab kernel: usb usb2: Manufacturer: Linux 5.10.0-8-amd64 ohci_hcd
+Apr 17 06:44:53 bs1-lab kernel: usb usb2: SerialNumber: 0000:00:06.0
+Apr 17 06:44:53 bs1-lab kernel: hub 2-0:1.0: USB hub found
+Apr 17 06:44:53 bs1-lab kernel: hub 2-0:1.0: 12 ports detected
+Apr 17 06:44:53 bs1-lab kernel: [drm] DMA map mode: Caching DMA mappings.
+Apr 17 06:44:53 bs1-lab kernel: [drm] Capabilities:
+Apr 17 06:44:53 bs1-lab kernel: [drm]   Cursor.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   Cursor bypass 2.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   Alpha cursor.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   3D.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   Extended Fifo.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   Pitchlock.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   Irq mask.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   GMR.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   Traces.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   GMR2.
+Apr 17 06:44:53 bs1-lab kernel: [drm]   Screen Object 2.
+Apr 17 06:44:53 bs1-lab kernel: [drm] Max GMR ids is 8192
+Apr 17 06:44:53 bs1-lab kernel: [drm] Max number of GMR pages is 1048576
+Apr 17 06:44:53 bs1-lab kernel: [drm] Max dedicated hypervisor surface memory is 507904 kiB
+Apr 17 06:44:53 bs1-lab kernel: [drm] Maximum display memory size is 16384 kiB
+Apr 17 06:44:53 bs1-lab kernel: [drm] VRAM at 0xe0000000 size is 16384 kiB
+Apr 17 06:44:53 bs1-lab kernel: [drm] MMIO at 0xf0000000 size is 2048 kiB
+Apr 17 06:44:53 bs1-lab kernel: [TTM] Zone  kernel: Available graphics memory: 2012966 KiB
+Apr 17 06:44:53 bs1-lab kernel: [TTM] Initializing pool allocator
+Apr 17 06:44:53 bs1-lab kernel: [TTM] Initializing DMA pool allocator
+Apr 17 06:44:53 bs1-lab kernel: [drm] Screen Objects Display Unit initialized
+Apr 17 06:44:53 bs1-lab kernel: [drm] width 720
+Apr 17 06:44:53 bs1-lab kernel: [drm] height 400
+Apr 17 06:44:53 bs1-lab kernel: [drm] bpp 32
+Apr 17 06:44:53 bs1-lab kernel: [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+Apr 17 06:44:53 bs1-lab kernel: [drm] Atomic: yes.
+Apr 17 06:44:53 bs1-lab kernel: [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+Apr 17 06:44:53 bs1-lab kernel: [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+Apr 17 06:44:53 bs1-lab kernel: input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+Apr 17 06:44:53 bs1-lab kernel: fbcon: svgadrmfb (fb0) is primary device
+Apr 17 06:44:53 bs1-lab kernel: Console: switching to colour frame buffer device 100x37
+Apr 17 06:44:53 bs1-lab kernel: ata2.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Apr 17 06:44:53 bs1-lab kernel: [drm] Initialized vmwgfx 2.18.0 20200114 for 0000:00:02.0 on minor 0
+Apr 17 06:44:53 bs1-lab kernel: ata3: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Apr 17 06:44:53 bs1-lab kernel: ata3.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Apr 17 06:44:53 bs1-lab kernel: ata3.00: 16777216 sectors, multi 128: LBA48 NCQ (depth 32)
+Apr 17 06:44:53 bs1-lab kernel: ata3.00: configured for UDMA/133
+Apr 17 06:44:53 bs1-lab kernel: scsi 1:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Apr 17 06:44:53 bs1-lab kernel: scsi 2:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Apr 17 06:44:53 bs1-lab kernel: sd 1:0:0:0: [sda] 16777216 512-byte logical blocks: (8.59 GB/8.00 GiB)
+Apr 17 06:44:53 bs1-lab kernel: sd 1:0:0:0: [sda] Write Protect is off
+Apr 17 06:44:53 bs1-lab kernel: sd 1:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Apr 17 06:44:53 bs1-lab kernel: sd 1:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Apr 17 06:44:53 bs1-lab kernel:  sda: sda1 sda2 < sda5 >
+Apr 17 06:44:53 bs1-lab kernel: sr 2:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Apr 17 06:44:53 bs1-lab kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+Apr 17 06:44:53 bs1-lab kernel: sd 1:0:0:0: [sda] Attached SCSI disk
+Apr 17 06:44:53 bs1-lab kernel: sr 2:0:0:0: Attached scsi CD-ROM sr0
+Apr 17 06:44:53 bs1-lab kernel: usb 2-1: new full-speed USB device number 2 using ohci-pci
+Apr 17 06:44:53 bs1-lab kernel: e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:c2:4b:5f
+Apr 17 06:44:53 bs1-lab kernel: e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Apr 17 06:44:53 bs1-lab kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+Apr 17 06:44:53 bs1-lab kernel: PM: Image not found (code -22)
+Apr 17 06:44:53 bs1-lab kernel: EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+Apr 17 06:44:53 bs1-lab kernel: usb 2-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Apr 17 06:44:53 bs1-lab kernel: usb 2-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Apr 17 06:44:53 bs1-lab kernel: usb 2-1: Product: USB Tablet
+Apr 17 06:44:53 bs1-lab kernel: usb 2-1: Manufacturer: VirtualBox
+Apr 17 06:44:53 bs1-lab kernel: Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.
+Apr 17 06:44:53 bs1-lab systemd[1]: Inserted module 'autofs4'
+Apr 17 06:44:53 bs1-lab systemd[1]: systemd 247.3-6 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +ZSTD +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+Apr 17 06:44:53 bs1-lab systemd[1]: Detected virtualization oracle.
+Apr 17 06:44:53 bs1-lab systemd[1]: Detected architecture x86-64.
+Apr 17 06:44:53 bs1-lab systemd[1]: Set hostname to <bs1-lab>.
+Apr 17 06:44:53 bs1-lab systemd[1]: /lib/systemd/system/plymouth-start.service:16: Unit configured to use KillMode=none. This is unsafe, as it disables systemd's process lifecycle management for the service. Please update your service to use a safer KillMode=, such as 'mixed' or 'control-group'. Support for KillMode=none is deprecated and will eventually be removed.
+Apr 17 06:44:53 bs1-lab systemd[1]: Queued start job for default target Graphical Interface.
+Apr 17 06:44:53 bs1-lab systemd[1]: Created slice system-getty.slice.
+Apr 17 06:44:53 bs1-lab systemd[1]: Created slice system-modprobe.slice.
+Apr 17 06:44:53 bs1-lab systemd[1]: Created slice User and Session Slice.
+Apr 17 06:44:53 bs1-lab systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+Apr 17 06:44:53 bs1-lab systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Apr 17 06:44:53 bs1-lab systemd[1]: Reached target Remote File Systems.
+Apr 17 06:44:53 bs1-lab systemd[1]: Reached target Slices.
+Apr 17 06:44:53 bs1-lab systemd[1]: Reached target System Time Set.
+Apr 17 06:44:53 bs1-lab systemd[1]: Reached target System Time Synchronized.
+Apr 17 06:44:53 bs1-lab systemd[1]: Listening on Syslog Socket.
+Apr 17 06:44:53 bs1-lab systemd[1]: Listening on fsck to fsckd communication Socket.
+Apr 17 06:44:53 bs1-lab systemd[1]: Listening on initctl Compatibility Named Pipe.
+Apr 17 06:44:53 bs1-lab systemd[1]: Listening on Journal Audit Socket.
+Apr 17 06:44:53 bs1-lab systemd[1]: Listening on Journal Socket (/dev/log).
+Apr 17 06:44:53 bs1-lab systemd[1]: Listening on Journal Socket.
+Apr 17 06:44:53 bs1-lab systemd[1]: Listening on udev Control Socket.
+Apr 17 06:44:53 bs1-lab systemd[1]: Listening on udev Kernel Socket.
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounting Huge Pages File System...
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounting POSIX Message Queue File System...
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounting Kernel Debug File System...
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounting Kernel Trace File System...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Set the console keyboard layout...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Create list of static device nodes for the current kernel...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Load Kernel Module configfs...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Load Kernel Module drm...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Load Kernel Module fuse...
+Apr 17 06:44:53 bs1-lab systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+Apr 17 06:44:53 bs1-lab systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Journal Service...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Load Kernel Modules...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Remount Root and Kernel File Systems...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Coldplug All udev Devices...
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounted Huge Pages File System.
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounted POSIX Message Queue File System.
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounted Kernel Debug File System.
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounted Kernel Trace File System.
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Create list of static device nodes for the current kernel.
+Apr 17 06:44:53 bs1-lab systemd[1]: modprobe@configfs.service: Succeeded.
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Load Kernel Module configfs.
+Apr 17 06:44:53 bs1-lab systemd[1]: modprobe@drm.service: Succeeded.
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Load Kernel Module drm.
+Apr 17 06:44:53 bs1-lab kernel: fuse: init (API version 7.32)
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounting Kernel Configuration File System...
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Load Kernel Modules.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Apply Kernel Variables...
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounted Kernel Configuration File System.
+Apr 17 06:44:53 bs1-lab systemd[1]: modprobe@fuse.service: Succeeded.
+Apr 17 06:44:53 bs1-lab kernel: EXT4-fs (sda1): re-mounted. Opts: errors=remount-ro
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Load Kernel Module fuse.
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Remount Root and Kernel File Systems.
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounting FUSE Control File System...
+Apr 17 06:44:53 bs1-lab systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+Apr 17 06:44:53 bs1-lab systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Load/Save Random Seed...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Create System Users...
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Apply Kernel Variables.
+Apr 17 06:44:53 bs1-lab systemd[1]: Mounted FUSE Control File System.
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Load/Save Random Seed.
+Apr 17 06:44:53 bs1-lab systemd[1]: Condition check resulted in First Boot Complete being skipped.
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Create System Users.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Create Static Device Nodes in /dev...
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Create Static Device Nodes in /dev.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Rule-based Manager for Device Events and Files...
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Coldplug All udev Devices.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Helper to synchronize boot up for ifupdown...
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Helper to synchronize boot up for ifupdown.
+Apr 17 06:44:53 bs1-lab systemd-journald[211]: Journal started
+Apr 17 06:44:53 bs1-lab systemd-journald[211]: Runtime Journal (/run/log/journal/d6fbbf5dd780455fbda5bee06faf860c) is 4.9M, max 39.3M, 34.3M free.
+Apr 17 06:44:53 bs1-lab systemd[1]: Started Journal Service.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Flush Journal to Persistent Storage...
+Apr 17 06:44:53 bs1-lab systemd-journald[211]: Time spent on flushing to /var/log/journal/d6fbbf5dd780455fbda5bee06faf860c is 172.680ms for 533 entries.
+Apr 17 06:44:53 bs1-lab systemd-journald[211]: System Journal (/var/log/journal/d6fbbf5dd780455fbda5bee06faf860c) is 152.0M, max 700.4M, 548.4M free.
+Apr 17 06:44:53 bs1-lab kernel: audit: type=1400 audit(1650170693.327:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=246 comm="apparmor_parser"
+Apr 17 06:44:53 bs1-lab kernel: audit: type=1400 audit(1650170693.327:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=246 comm="apparmor_parser"
+Apr 17 06:44:53 bs1-lab kernel: ACPI: AC Adapter [AC] (on-line)
+Apr 17 06:44:53 bs1-lab kernel: sd 1:0:0:0: Attached scsi generic sg0 type 0
+Apr 17 06:44:53 bs1-lab kernel: sr 2:0:0:0: Attached scsi generic sg1 type 5
+Apr 17 06:44:53 bs1-lab kernel: input: PC Speaker as /devices/platform/pcspkr/input/input6
+Apr 17 06:44:53 bs1-lab audit[246]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=246 comm="apparmor_parser"
+Apr 17 06:44:53 bs1-lab audit[246]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=246 comm="apparmor_parser"
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Set the console keyboard layout.
+Apr 17 06:44:53 bs1-lab systemd[1]: Reached target Local File Systems (Pre).
+Apr 17 06:44:53 bs1-lab systemd[1]: Reached target Local File Systems.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Load AppArmor profiles...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Set console font and keymap...
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+Apr 17 06:44:53 bs1-lab apparmor.systemd[236]: Restarting AppArmor
+Apr 17 06:44:53 bs1-lab apparmor.systemd[236]: Reloading AppArmor profiles
+Apr 17 06:44:53 bs1-lab systemd[1]: Condition check resulted in Store a System Token in an EFI Variable being skipped.
+Apr 17 06:44:53 bs1-lab systemd[1]: Condition check resulted in Commit a transient machine-id on disk being skipped.
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Set console font and keymap.
+Apr 17 06:44:53 bs1-lab systemd[1]: Received SIGRTMIN+20 from PID 143 (plymouthd).
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Tell Plymouth To Write Out Runtime Data.
+Apr 17 06:44:53 bs1-lab systemd[1]: Started Rule-based Manager for Device Events and Files.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Show Plymouth Boot Screen...
+Apr 17 06:44:53 bs1-lab systemd[1]: Started Show Plymouth Boot Screen.
+Apr 17 06:44:53 bs1-lab systemd[1]: Condition check resulted in Dispatch Password Requests to Console Directory Watch being skipped.
+Apr 17 06:44:53 bs1-lab systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+Apr 17 06:44:53 bs1-lab systemd[1]: Reached target Local Encrypted Volumes.
+Apr 17 06:44:53 bs1-lab systemd[1]: Reached target Paths.
+Apr 17 06:44:53 bs1-lab systemd-udevd[254]: Using default interface naming scheme 'v247'.
+Apr 17 06:44:53 bs1-lab systemd-udevd[254]: ethtool: autonegotiation is unset or enabled, the speed and duplex are not writable.
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Flush Journal to Persistent Storage.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Create Volatile Files and Directories...
+Apr 17 06:44:53 bs1-lab kernel: hid: raw HID events driver (C) Jiri Kosina
+Apr 17 06:44:53 bs1-lab kernel: vboxguest: loading out-of-tree module taints kernel.
+Apr 17 06:44:53 bs1-lab kernel: vboxguest: module verification failed: signature and/or required key missing - tainting kernel
+Apr 17 06:44:53 bs1-lab systemd-udevd[249]: ethtool: autonegotiation is unset or enabled, the speed and duplex are not writable.
+Apr 17 06:44:53 bs1-lab kernel: RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+Apr 17 06:44:53 bs1-lab kernel: usbcore: registered new interface driver usbhid
+Apr 17 06:44:53 bs1-lab kernel: usbhid: USB HID core driver
+Apr 17 06:44:53 bs1-lab kernel: cryptd: max_cpu_qlen set to 1000
+Apr 17 06:44:53 bs1-lab systemd[1]: Finished Create Volatile Files and Directories.
+Apr 17 06:44:53 bs1-lab systemd[1]: Starting Update UTMP about System Boot/Shutdown...
+Apr 17 06:44:53 bs1-lab kernel: vgdrvHeartbeatInit: Setting up heartbeat to trigger every 2000 milliseconds
+Apr 17 06:44:53 bs1-lab kernel: input: Unspecified device as /devices/pci0000:00/0000:00:04.0/input/input7
+Apr 17 06:44:53 bs1-lab kernel: vboxguest: Successfully loaded version 6.1.20
+Apr 17 06:44:53 bs1-lab kernel: vboxguest: misc device minor 61, IRQ 20, I/O port d040, MMIO at 00000000f0400000 (size 0x400000)
+Apr 17 06:44:53 bs1-lab kernel: vboxguest: Successfully loaded version 6.1.20 (interface 0x00010004)
+Apr 17 06:44:53 bs1-lab systemd[1]: Found device VBOX_HARDDISK 5.
+Apr 17 06:44:53 bs1-lab kernel: input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.0/0003:80EE:0021.0001/input/input8
+Apr 17 06:44:53 bs1-lab kernel: hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Apr 17 06:44:53 bs1-lab systemd[1]: Activating swap /dev/disk/by-uuid/c14de98d-98f3-4f77-8602-094f4060366f...
+Apr 17 06:44:53 bs1-lab kernel: AVX2 version of gcm_enc/dec engaged.
+Apr 17 06:44:53 bs1-lab kernel: AES CTR mode by8 optimization enabled
+Apr 17 06:44:54 bs1-lab systemd[1]: Finished Update UTMP about System Boot/Shutdown.
+Apr 17 06:44:54 bs1-lab kernel: Adding 998396k swap on /dev/sda5.  Priority:-2 extents:1 across:998396k FS
+Apr 17 06:44:54 bs1-lab systemd[1]: Activated swap /dev/disk/by-uuid/c14de98d-98f3-4f77-8602-094f4060366f.
+Apr 17 06:44:54 bs1-lab systemd[1]: Reached target Swap.
+Apr 17 06:44:54 bs1-lab audit[264]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-soffice" pid=264 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[264]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-soffice//gpg" pid=264 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab kernel: audit: type=1400 audit(1650170694.059:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-soffice" pid=264 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab kernel: audit: type=1400 audit(1650170694.059:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-soffice//gpg" pid=264 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[378]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=378 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab kernel: audit: type=1400 audit(1650170694.067:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=378 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[383]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/x86_64-linux-gnu/lightdm/lightdm-guest-session" pid=383 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[383]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/x86_64-linux-gnu/lightdm/lightdm-guest-session//chromium" pid=383 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab kernel: audit: type=1400 audit(1650170694.075:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/x86_64-linux-gnu/lightdm/lightdm-guest-session" pid=383 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab kernel: audit: type=1400 audit(1650170694.075:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/x86_64-linux-gnu/lightdm/lightdm-guest-session//chromium" pid=383 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[390]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-oopslash" pid=390 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab kernel: audit: type=1400 audit(1650170694.083:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-oopslash" pid=390 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[395]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-senddoc" pid=395 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab kernel: audit: type=1400 audit(1650170694.087:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-senddoc" pid=395 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[397]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-xpdfimport" pid=397 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[399]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=399 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[399]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=399 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab audit[399]: AVC apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=399 comm="apparmor_parser"
+Apr 17 06:44:54 bs1-lab systemd[1]: Finished Load AppArmor profiles.
+Apr 17 06:44:54 bs1-lab systemd[1]: Reached target System Initialization.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Trigger anacron every hour.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Daily apt download activities.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Daily apt upgrade and clean activities.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Periodic ext4 Online Metadata Check for All Filesystems.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Discard unused blocks once a week.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Daily rotation of log files.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Daily man-db regeneration.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Updates mlocate database every day.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Daily Cleanup of Temporary Directories.
+Apr 17 06:44:54 bs1-lab systemd[1]: Reached target Timers.
+Apr 17 06:44:54 bs1-lab systemd[1]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+Apr 17 06:44:54 bs1-lab systemd[1]: Listening on D-Bus System Message Bus Socket.
+Apr 17 06:44:54 bs1-lab systemd[1]: Reached target Sockets.
+Apr 17 06:44:54 bs1-lab systemd[1]: Reached target Basic System.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Run anacron jobs.
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Avahi mDNS/DNS-SD Stack...
+Apr 17 06:44:54 bs1-lab kernel: intel_pmc_core intel_pmc_core.0:  initialized
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Regular background program processing daemon.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started D-Bus System Message Bus.
+Apr 17 06:44:54 bs1-lab anacron[400]: Anacron 2.3 started on 2022-04-17
+Apr 17 06:44:54 bs1-lab cron[402]: (CRON) INFO (pidfile fd = 3)
+Apr 17 06:44:54 bs1-lab anacron[400]: Will run job `cron.daily' in 5 min.
+Apr 17 06:44:54 bs1-lab anacron[400]: Will run job `cron.weekly' in 10 min.
+Apr 17 06:44:54 bs1-lab anacron[400]: Will run job `cron.monthly' in 15 min.
+Apr 17 06:44:54 bs1-lab anacron[400]: Jobs will be executed sequentially
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Network Manager...
+Apr 17 06:44:54 bs1-lab cron[402]: (CRON) INFO (Running @reboot jobs)
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: Found user 'avahi' (UID 109) and group 'avahi' (GID 115).
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Remove Stale Online ext4 Metadata Check Snapshots...
+Apr 17 06:44:54 bs1-lab systemd[1]: Condition check resulted in getty on tty2-tty6 if dbus and logind are not available being skipped.
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Initialize hardware monitoring sensors...
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Raise network interfaces...
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Authorization Manager...
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting System Logging Service...
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting User Login Management...
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Disk Manager...
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting vboxadd.service...
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting WPA supplicant...
+Apr 17 06:44:54 bs1-lab rsyslogd[409]: imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.2102.0]
+Apr 17 06:44:54 bs1-lab rsyslogd[409]: [origin software="rsyslogd" swVersion="8.2102.0" x-pid="409" x-info="https://www.rsyslog.com"] start
+Apr 17 06:44:54 bs1-lab systemd[1]: Started System Logging Service.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: Successfully dropped root privileges.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: avahi-daemon 0.8 starting up.
+Apr 17 06:44:54 bs1-lab sensors[422]: BAT0-acpi-0
+Apr 17 06:44:54 bs1-lab sensors[422]: Adapter: ACPI interface
+Apr 17 06:44:54 bs1-lab sensors[422]: in0:          10.00 V
+Apr 17 06:44:54 bs1-lab systemd[1]: Finished Initialize hardware monitoring sensors.
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Rotate log files...
+Apr 17 06:44:54 bs1-lab kernel: snd_intel8x0 0000:00:05.0: allow list rate for 1028:0177 is 48000
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Daily man-db regeneration...
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Update a database for mlocate.
+Apr 17 06:44:54 bs1-lab udisksd[414]: udisks daemon version 2.9.2 starting
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Avahi mDNS/DNS-SD Stack.
+Apr 17 06:44:54 bs1-lab wpa_supplicant[417]: Successfully initialized wpa_supplicant
+Apr 17 06:44:54 bs1-lab systemd[1]: Started WPA supplicant.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: Successfully called chroot().
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: Successfully dropped remaining capabilities.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: No service file found in /etc/avahi/services.
+Apr 17 06:44:54 bs1-lab polkitd[408]: started daemon version 0.105 using authority implementation `local' version `0.105'
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Authorization Manager.
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Modem Manager...
+Apr 17 06:44:54 bs1-lab udisksd[414]: failed to load module mdraid: libbd_mdraid.so.2: cannot open shared object file: No such file or directory
+Apr 17 06:44:54 bs1-lab NetworkManager[404]: <info>  [1650170694.4544] NetworkManager (version 1.30.0) is starting... (for the first time)
+Apr 17 06:44:54 bs1-lab NetworkManager[404]: <info>  [1650170694.4862] Read config: /etc/NetworkManager/NetworkManager.conf (lib: no-mac-addr-change.conf)
+Apr 17 06:44:54 bs1-lab udisksd[414]: Failed to load the 'mdraid' libblockdev plugin
+Apr 17 06:44:54 bs1-lab systemd[1]: Condition check resulted in Manage Sound Card State (restore and store) being skipped.
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Save/Restore Sound Card State...
+Apr 17 06:44:54 bs1-lab systemd-logind[412]: New seat seat0.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Network Manager.
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Network Manager Wait Online...
+Apr 17 06:44:54 bs1-lab NetworkManager[404]: <info>  [1650170694.5372] bus-manager: acquired D-Bus service "org.freedesktop.NetworkManager"
+Apr 17 06:44:54 bs1-lab systemd-logind[412]: Watching system buttons on /dev/input/event1 (Power Button)
+Apr 17 06:44:54 bs1-lab systemd-logind[412]: Watching system buttons on /dev/input/event3 (Sleep Button)
+Apr 17 06:44:54 bs1-lab systemd-logind[412]: Watching system buttons on /dev/input/event0 (AT Translated Set 2 keyboard)
+Apr 17 06:44:54 bs1-lab systemd[1]: Started User Login Management.
+Apr 17 06:44:54 bs1-lab systemd[1]: Finished Save/Restore Sound Card State.
+Apr 17 06:44:54 bs1-lab systemd[1]: Reached target Sound Card.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: Joining mDNS multicast group on interface lo.IPv6 with address ::1.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: New relevant interface lo.IPv6 for mDNS.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: Joining mDNS multicast group on interface lo.IPv4 with address 127.0.0.1.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: New relevant interface lo.IPv4 for mDNS.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: Network interface enumeration completed.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: Registering new address record for ::1 on lo.*.
+Apr 17 06:44:54 bs1-lab avahi-daemon[401]: Registering new address record for 127.0.0.1 on lo.IPv4.
+Apr 17 06:44:54 bs1-lab ModemManager[448]: <info>  ModemManager (version 1.14.12) starting in system bus...
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Modem Manager.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started Disk Manager.
+Apr 17 06:44:54 bs1-lab udisksd[414]: Acquired the name org.freedesktop.UDisks2 on the system message bus
+Apr 17 06:44:54 bs1-lab systemd[1]: Finished Raise network interfaces.
+Apr 17 06:44:54 bs1-lab systemd[1]: Reached target Network.
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting OpenBSD Secure Shell server...
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Permit User Sessions...
+Apr 17 06:44:54 bs1-lab systemd[1]: Finished Permit User Sessions.
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Hold until boot process finishes up...
+Apr 17 06:44:54 bs1-lab sshd[485]: Server listening on 0.0.0.0 port 22.
+Apr 17 06:44:54 bs1-lab sshd[485]: Server listening on :: port 22.
+Apr 17 06:44:54 bs1-lab systemd[1]: Started OpenBSD Secure Shell server.
+Apr 17 06:44:54 bs1-lab NetworkManager[404]: <info>  [1650170694.8927] manager[0x560dfd3cb010]: monitoring kernel firmware directory '/lib/firmware'.
+Apr 17 06:44:54 bs1-lab NetworkManager[404]: <info>  [1650170694.8933] monitoring ifupdown state file '/run/network/ifstate'.
+Apr 17 06:44:54 bs1-lab dbus-daemon[403]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.5' (uid=0 pid=404 comm="/usr/sbin/NetworkManager --no-daemon ")
+Apr 17 06:44:54 bs1-lab systemd[1]: Starting Hostname Service...
+Apr 17 06:44:54 bs1-lab vboxadd[415]: VirtualBox Guest Additions: Starting.
+Apr 17 06:44:54 bs1-lab vboxadd[492]: VirtualBox Guest Additions: Building the VirtualBox Guest Additions kernel
+Apr 17 06:44:54 bs1-lab vboxadd[492]: modules.  This may take a while.
+Apr 17 06:44:54 bs1-lab vboxadd[494]: VirtualBox Guest Additions: To build modules for other installed kernels, run
+Apr 17 06:44:54 bs1-lab vboxadd[496]: VirtualBox Guest Additions:   /sbin/rcvboxadd quicksetup <version>
+Apr 17 06:44:54 bs1-lab vboxadd[498]: VirtualBox Guest Additions: or
+Apr 17 06:44:54 bs1-lab vboxadd[500]: VirtualBox Guest Additions:   /sbin/rcvboxadd quicksetup all
+Apr 17 06:44:55 bs1-lab dbus-daemon[403]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Apr 17 06:44:55 bs1-lab systemd[1]: Started Hostname Service.
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0129] hostname: hostname: using hostnamed
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0130] hostname: hostname changed from (none) to "bs1-lab"
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0133] dns-mgr[0x560dfd3c0170]: init: dns=default,systemd-resolved rc-manager=symlink (auto)
+Apr 17 06:44:55 bs1-lab systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0268] manager[0x560dfd3cb010]: rfkill: Wi-Fi hardware radio set enabled
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0268] manager[0x560dfd3cb010]: rfkill: WWAN hardware radio set enabled
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0481] Loaded device plugin: NMTeamFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/1.30.0/libnm-device-plugin-team.so)
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0519] Loaded device plugin: NMWwanFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/1.30.0/libnm-device-plugin-wwan.so)
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0547] Loaded device plugin: NMWifiFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/1.30.0/libnm-device-plugin-wifi.so)
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0599] Loaded device plugin: NMBluezManager (/usr/lib/x86_64-linux-gnu/NetworkManager/1.30.0/libnm-device-plugin-bluetooth.so)
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0618] Loaded device plugin: NMAtmManager (/usr/lib/x86_64-linux-gnu/NetworkManager/1.30.0/libnm-device-plugin-adsl.so)
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0622] manager: rfkill: Wi-Fi enabled by radio killswitch; enabled by state file
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0623] manager: rfkill: WWAN enabled by radio killswitch; enabled by state file
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0624] manager: Networking is enabled by state file
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0627] dhcp-init: Using DHCP client 'internal'
+Apr 17 06:44:55 bs1-lab dbus-daemon[403]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.5' (uid=0 pid=404 comm="/usr/sbin/NetworkManager --no-daemon ")
+Apr 17 06:44:55 bs1-lab systemd[1]: Starting Network Manager Script Dispatcher Service...
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0692] settings: Loaded settings plugin: ifupdown ("/usr/lib/x86_64-linux-gnu/NetworkManager/1.30.0/libnm-settings-plugin-ifupdown.so")
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0695] settings: Loaded settings plugin: keyfile (internal)
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0696] ifupdown: management mode: unmanaged
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0696] ifupdown:       interface-parser: parsing file /etc/network/interfaces
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0731] ifupdown:       interface-parser: source line includes interfaces file(s) /etc/network/interfaces.d/*
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <warn>  [1650170695.0732] ifupdown: interfaces file /etc/network/interfaces.d/* doesn't exist
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0732] ifupdown:       interface-parser: finished parsing file /etc/network/interfaces
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0852] device (lo): carrier: link connected
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0855] manager: (lo): new Generic device (/org/freedesktop/NetworkManager/Devices/1)
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0862] manager: (enp0s3): new Ethernet device (/org/freedesktop/NetworkManager/Devices/2)
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.0910] device (enp0s3): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Apr 17 06:44:55 bs1-lab dbus-daemon[403]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Apr 17 06:44:55 bs1-lab systemd[1]: Started Network Manager Script Dispatcher Service.
+Apr 17 06:44:55 bs1-lab NetworkManager[404]: <info>  [1650170695.1228] modem-manager: ModemManager available
+Apr 17 06:44:55 bs1-lab systemd[1]: e2scrub_reap.service: Succeeded.
+Apr 17 06:44:55 bs1-lab systemd[1]: Finished Remove Stale Online ext4 Metadata Check Snapshots.
+Apr 17 06:44:55 bs1-lab systemd[1]: rsyslog.service: Sent signal SIGHUP to main process 409 (rsyslogd) on client request.
+Apr 17 06:44:55 bs1-lab systemd[1]: logrotate.service: Succeeded.
+Apr 17 06:44:55 bs1-lab systemd[1]: Finished Rotate log files.
+Apr 17 06:44:55 bs1-lab avahi-daemon[401]: Server startup complete. Host name is bs1-lab.local. Local service cookie is 861960044.
+Apr 17 06:44:56 bs1-lab systemd[1]: man-db.service: Succeeded.
+Apr 17 06:44:56 bs1-lab systemd[1]: Finished Daily man-db regeneration.
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1280] device (enp0s3): carrier: link connected
+Apr 17 06:44:57 bs1-lab kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Apr 17 06:44:57 bs1-lab kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1293] device (enp0s3): state change: unavailable -> disconnected (reason 'carrier-changed', sys-iface-state: 'managed')
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1306] policy: auto-activating connection 'Wired connection 1' (29f09f59-238f-4744-9478-99a8e51ffcb9)
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1331] device (enp0s3): Activation: starting connection 'Wired connection 1' (29f09f59-238f-4744-9478-99a8e51ffcb9)
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1339] device (enp0s3): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1360] manager: NetworkManager state is now CONNECTING
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1371] device (enp0s3): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1396] device (enp0s3): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1411] dhcp4 (enp0s3): activation: beginning transaction (timeout in 45 seconds)
+Apr 17 06:44:57 bs1-lab avahi-daemon[401]: Joining mDNS multicast group on interface enp0s3.IPv6 with address fe80::a00:27ff:fec2:4b5f.
+Apr 17 06:44:57 bs1-lab avahi-daemon[401]: New relevant interface enp0s3.IPv6 for mDNS.
+Apr 17 06:44:57 bs1-lab avahi-daemon[401]: Registering new address record for fe80::a00:27ff:fec2:4b5f on enp0s3.*.
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1583] dhcp4 (enp0s3): state changed unknown -> bound, address=10.0.2.15
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1592] device (enp0s3): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Apr 17 06:44:57 bs1-lab avahi-daemon[401]: Joining mDNS multicast group on interface enp0s3.IPv4 with address 10.0.2.15.
+Apr 17 06:44:57 bs1-lab avahi-daemon[401]: New relevant interface enp0s3.IPv4 for mDNS.
+Apr 17 06:44:57 bs1-lab avahi-daemon[401]: Registering new address record for 10.0.2.15 on enp0s3.IPv4.
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1647] device (enp0s3): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1649] device (enp0s3): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1653] manager: NetworkManager state is now CONNECTED_LOCAL
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1659] manager: NetworkManager state is now CONNECTED_SITE
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1660] policy: set 'Wired connection 1' (enp0s3) as default for IPv4 routing and DNS
+Apr 17 06:44:57 bs1-lab dbus-daemon[403]: [system] Activating via systemd: service name='org.freedesktop.resolve1' unit='dbus-org.freedesktop.resolve1.service' requested by ':1.5' (uid=0 pid=404 comm="/usr/sbin/NetworkManager --no-daemon ")
+Apr 17 06:44:57 bs1-lab dbus-daemon[403]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.resolve1.service': Unit dbus-org.freedesktop.resolve1.service not found.
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1777] device (enp0s3): Activation: successful, device activated.
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1782] manager: NetworkManager state is now CONNECTED_GLOBAL
+Apr 17 06:44:57 bs1-lab NetworkManager[404]: <info>  [1650170697.1816] manager: startup complete
+Apr 17 06:44:57 bs1-lab systemd[1]: Finished Network Manager Wait Online.
+Apr 17 06:44:57 bs1-lab systemd[1]: Reached target Network is Online.
+Apr 17 06:44:57 bs1-lab systemd[1]: Starting LSB: disk temperature monitoring daemon...
+Apr 17 06:44:57 bs1-lab systemd[1]: Started LSB: disk temperature monitoring daemon.
+Apr 17 06:44:57 bs1-lab ModemManager[448]: <info>  [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:03.0': not supported by any plugin
+Apr 17 06:44:58 bs1-lab systemd[1]: mlocate.service: Succeeded.
+Apr 17 06:45:00 bs1-lab useradd[546]: failed adding user 'vboxadd', data deleted
+Apr 17 06:45:00 bs1-lab useradd[547]: failed adding user 'vboxadd', data deleted
+Apr 17 06:45:00 bs1-lab vboxadd[561]: VirtualBox Guest Additions: Running kernel modules will not be replaced until
+Apr 17 06:45:00 bs1-lab vboxadd[561]: the system is restarted
+Apr 17 06:45:00 bs1-lab kernel: vboxvideo: loading version 6.1.20 r143896
+Apr 17 06:45:00 bs1-lab systemd[1]: Finished vboxadd.service.
+Apr 17 06:45:00 bs1-lab systemd[1]: Starting Light Display Manager...
+Apr 17 06:45:01 bs1-lab systemd[1]: Starting vboxadd-service.service...
+Apr 17 06:45:01 bs1-lab vboxadd-service[608]: vboxadd-service.sh: Starting VirtualBox Guest Addition service.
+Apr 17 06:45:01 bs1-lab vboxadd-service.sh[611]: Starting VirtualBox Guest Addition service.
+Apr 17 06:45:01 bs1-lab systemd[1]: Received SIGRTMIN+21 from PID 143 (plymouthd).
+Apr 17 06:45:01 bs1-lab kernel: 04:45:01.035346 main     VBoxService 6.1.20 r143896 (verbosity: 0) linux.amd64 (Apr 20 2021 06:45:42) release log
+Apr 17 06:45:01 bs1-lab kernel: 04:45:01.035429 main     OS Product: Linux
+Apr 17 06:45:01 bs1-lab kernel: 04:45:01.035458 main     OS Release: 5.10.0-8-amd64
+Apr 17 06:45:01 bs1-lab kernel: 04:45:01.035493 main     OS Version: #1 SMP Debian 5.10.46-5 (2021-09-23)
+Apr 17 06:45:01 bs1-lab kernel: 04:45:01.035521 main     Executable: /opt/VBoxGuestAdditions-6.1.20/sbin/VBoxService
+Apr 17 06:45:01 bs1-lab kernel: 04:45:01.036871 main     6.1.20 r143896 started. Verbose level = 0
+Apr 17 06:45:01 bs1-lab vboxadd-service.sh[625]: VirtualBox Guest Addition service started.
+Apr 17 06:45:01 bs1-lab systemd[1]: Started vboxadd-service.service.
+Apr 17 06:45:01 bs1-lab kernel: 04:45:01.040529 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+Apr 17 06:45:01 bs1-lab systemd[1]: Received SIGRTMIN+21 from PID 143 (n/a).
+Apr 17 06:45:01 bs1-lab systemd[1]: Finished Hold until boot process finishes up.
+Apr 17 06:45:01 bs1-lab systemd[1]: Started Getty on tty1.
+Apr 17 06:45:01 bs1-lab lightdm[607]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Apr 17 06:45:01 bs1-lab systemd[1]: Reached target Login Prompts.
+Apr 17 06:45:01 bs1-lab systemd[1]: Reached target Multi-User System.
+Apr 17 06:45:01 bs1-lab systemd[1]: Started Light Display Manager.
+Apr 17 06:45:01 bs1-lab systemd[1]: Reached target Graphical Interface.
+Apr 17 06:45:01 bs1-lab systemd[1]: Starting Update UTMP about System Runlevel Changes...
+Apr 17 06:45:01 bs1-lab systemd[1]: systemd-update-utmp-runlevel.service: Succeeded.
+Apr 17 06:45:01 bs1-lab systemd[1]: Finished Update UTMP about System Runlevel Changes.
+Apr 17 06:45:01 bs1-lab systemd[1]: Startup finished in 2.615s (kernel) + 8.389s (userspace) = 11.004s.
+Apr 17 06:45:01 bs1-lab lightdm[651]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Apr 17 06:45:01 bs1-lab lightdm[651]: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=114) by (uid=0)
+Apr 17 06:45:01 bs1-lab systemd[1]: Created slice User Slice of UID 114.
+Apr 17 06:45:01 bs1-lab systemd[1]: Starting User Runtime Directory /run/user/114...
+Apr 17 06:45:01 bs1-lab systemd-logind[412]: New session c1 of user lightdm.
+Apr 17 06:45:01 bs1-lab systemd[1]: Finished User Runtime Directory /run/user/114.
+Apr 17 06:45:01 bs1-lab systemd[1]: Starting User Manager for UID 114...
+Apr 17 06:45:01 bs1-lab systemd[655]: pam_unix(systemd-user:session): session opened for user lightdm(uid=114) by (uid=0)
+Apr 17 06:45:01 bs1-lab systemd[660]: gpgconf: error running '/usr/lib/gnupg/scdaemon': probably not installed
+Apr 17 06:45:01 bs1-lab systemd[655]: Queued start job for default target Main User Target.
+Apr 17 06:45:01 bs1-lab systemd[655]: Created slice User Application Slice.
+Apr 17 06:45:01 bs1-lab systemd[655]: Reached target Paths.
+Apr 17 06:45:01 bs1-lab systemd[655]: Reached target Timers.
+Apr 17 06:45:01 bs1-lab systemd[655]: Starting D-Bus User Message Bus Socket.
+Apr 17 06:45:01 bs1-lab systemd[655]: Listening on GnuPG network certificate management daemon.
+Apr 17 06:45:01 bs1-lab systemd[655]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 17 06:45:01 bs1-lab systemd[655]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 17 06:45:01 bs1-lab systemd[655]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+Apr 17 06:45:01 bs1-lab systemd[655]: Listening on GnuPG cryptographic agent and passphrase cache.
+Apr 17 06:45:01 bs1-lab systemd[655]: Listening on Multimedia System.
+Apr 17 06:45:01 bs1-lab systemd[655]: Listening on debconf communication socket.
+Apr 17 06:45:01 bs1-lab systemd[655]: Listening on Sound System.
+Apr 17 06:45:01 bs1-lab systemd[655]: Listening on D-Bus User Message Bus Socket.
+Apr 17 06:45:01 bs1-lab systemd[655]: Reached target Sockets.
+Apr 17 06:45:01 bs1-lab systemd[655]: Reached target Basic System.
+Apr 17 06:45:01 bs1-lab systemd[1]: Started User Manager for UID 114.
+Apr 17 06:45:01 bs1-lab systemd[1]: Started Session c1 of user lightdm.
+Apr 17 06:45:01 bs1-lab systemd[655]: Started Multimedia Service.
+Apr 17 06:45:01 bs1-lab systemd[655]: Starting Sound Service...
+Apr 17 06:45:01 bs1-lab dbus-daemon[403]: [system] Activating via systemd: service name='org.freedesktop.RealtimeKit1' unit='rtkit-daemon.service' requested by ':1.18' (uid=114 pid=675 comm="/usr/bin/pipewire ")
+Apr 17 06:45:01 bs1-lab systemd[1]: Starting RealtimeKit Scheduling Policy Service...
+Apr 17 06:45:01 bs1-lab dbus-daemon[403]: [system] Successfully activated service 'org.freedesktop.RealtimeKit1'
+Apr 17 06:45:01 bs1-lab systemd[1]: Started RealtimeKit Scheduling Policy Service.
+Apr 17 06:45:01 bs1-lab rtkit-daemon[679]: Successfully called chroot.
+Apr 17 06:45:01 bs1-lab rtkit-daemon[679]: Successfully dropped privileges.
+Apr 17 06:45:01 bs1-lab rtkit-daemon[679]: Successfully limited resources.
+Apr 17 06:45:01 bs1-lab rtkit-daemon[679]: Running.
+Apr 17 06:45:01 bs1-lab rtkit-daemon[679]: Watchdog thread running.
+Apr 17 06:45:01 bs1-lab rtkit-daemon[679]: Canary thread running.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Successfully made thread 675 of process 675 owned by '114' high priority at nice level -11.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 1 threads of 1 processes of 1 users.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Successfully made thread 676 of process 676 owned by '114' high priority at nice level -11.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 2 threads of 2 processes of 1 users.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 2 threads of 2 processes of 1 users.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 2 threads of 2 processes of 1 users.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Successfully made thread 678 of process 675 owned by '114' RT at priority 20.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 3 threads of 2 processes of 1 users.
+Apr 17 06:45:02 bs1-lab systemd[655]: Started D-Bus User Message Bus.
+Apr 17 06:45:02 bs1-lab pipewire[675]: Failed to receive portal pid: org.freedesktop.DBus.Error.NameHasNoOwner: Could not get PID of name 'org.freedesktop.portal.Desktop': no such name
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Successfully made thread 684 of process 684 owned by '114' high priority at nice level -11.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 4 threads of 3 processes of 1 users.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 4 threads of 3 processes of 1 users.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 4 threads of 3 processes of 1 users.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Successfully made thread 685 of process 684 owned by '114' RT at priority 20.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 5 threads of 3 processes of 1 users.
+Apr 17 06:45:02 bs1-lab pulseaudio[676]: Disabling timer-based scheduling because running inside a VM.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 5 threads of 3 processes of 1 users.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Successfully made thread 690 of process 676 owned by '114' RT at priority 5.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 6 threads of 3 processes of 1 users.
+Apr 17 06:45:02 bs1-lab pulseaudio[676]: Disabling timer-based scheduling because running inside a VM.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 6 threads of 3 processes of 1 users.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Successfully made thread 691 of process 676 owned by '114' RT at priority 5.
+Apr 17 06:45:02 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 1 users.
+Apr 17 06:45:02 bs1-lab dbus-daemon[682]: [session uid=114 pid=682] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.4' (uid=114 pid=677 comm="/usr/sbin/lightdm-gtk-greeter ")
+Apr 17 06:45:02 bs1-lab systemd[655]: Starting Accessibility services bus...
+Apr 17 06:45:02 bs1-lab systemd[655]: Started Sound Service.
+Apr 17 06:45:02 bs1-lab systemd[655]: Reached target Main User Target.
+Apr 17 06:45:02 bs1-lab dbus-daemon[682]: [session uid=114 pid=682] Successfully activated service 'org.a11y.Bus'
+Apr 17 06:45:02 bs1-lab systemd[655]: Started Accessibility services bus.
+Apr 17 06:45:02 bs1-lab systemd[655]: Startup finished in 577ms.
+Apr 17 06:45:02 bs1-lab dbus-daemon[682]: [session uid=114 pid=682] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.6' (uid=114 pid=677 comm="/usr/sbin/lightdm-gtk-greeter ")
+Apr 17 06:45:02 bs1-lab systemd[655]: Starting Virtual filesystem service...
+Apr 17 06:45:02 bs1-lab dbus-daemon[682]: [session uid=114 pid=682] Successfully activated service 'org.gtk.vfs.Daemon'
+Apr 17 06:45:02 bs1-lab systemd[655]: Started Virtual filesystem service.
+Apr 17 06:45:02 bs1-lab at-spi-bus-launcher[697]: dbus-daemon[697]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=114 pid=677 comm="/usr/sbin/lightdm-gtk-greeter ")
+Apr 17 06:45:02 bs1-lab at-spi-bus-launcher[697]: dbus-daemon[697]: Successfully activated service 'org.a11y.atspi.Registry'
+Apr 17 06:45:02 bs1-lab at-spi-bus-launcher[717]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Apr 17 06:45:07 bs1-lab systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Apr 17 06:45:23 bs1-lab systemd[1]: Starting Online ext4 Metadata Check for All Filesystems...
+Apr 17 06:45:23 bs1-lab systemd[1]: e2scrub_all.service: Succeeded.
+Apr 17 06:45:23 bs1-lab systemd[1]: Finished Online ext4 Metadata Check for All Filesystems.
+Apr 17 06:45:23 bs1-lab sshd[720]: Accepted publickey for tux from 10.0.2.2 port 53905 ssh2: ECDSA SHA256:Sp5xcgZF9Z4V84Mkz+XMp3EzS2txUkgdN35uqz1OjDg
+Apr 17 06:45:23 bs1-lab sshd[720]: pam_unix(sshd:session): session opened for user tux(uid=1000) by (uid=0)
+Apr 17 06:45:23 bs1-lab systemd-logind[412]: New session 2 of user tux.
+Apr 17 06:45:23 bs1-lab systemd[1]: Created slice User Slice of UID 1000.
+Apr 17 06:45:23 bs1-lab systemd[1]: Starting User Runtime Directory /run/user/1000...
+Apr 17 06:45:23 bs1-lab systemd[1]: Finished User Runtime Directory /run/user/1000.
+Apr 17 06:45:23 bs1-lab systemd[1]: Starting User Manager for UID 1000...
+Apr 17 06:45:23 bs1-lab systemd[724]: pam_unix(systemd-user:session): session opened for user tux(uid=1000) by (uid=0)
+Apr 17 06:45:23 bs1-lab systemd[729]: gpgconf: error running '/usr/lib/gnupg/scdaemon': probably not installed
+Apr 17 06:45:23 bs1-lab systemd-xdg-autostart-generator[742]: /home/tux/.config/autostart/vlx-connect.desktop:9: Unknown key name 'RunHook' in section 'Desktop Entry', ignoring.
+Apr 17 06:45:23 bs1-lab systemd-xdg-autostart-generator[742]: /home/tux/.config/autostart/vlx-x11vnc.desktop:9: Unknown key name 'RunHook' in section 'Desktop Entry', ignoring.
+Apr 17 06:45:23 bs1-lab systemd[724]: Queued start job for default target Main User Target.
+Apr 17 06:45:23 bs1-lab systemd[724]: Created slice User Application Slice.
+Apr 17 06:45:23 bs1-lab systemd[724]: Reached target Paths.
+Apr 17 06:45:23 bs1-lab systemd[724]: Reached target Timers.
+Apr 17 06:45:23 bs1-lab systemd[724]: Starting D-Bus User Message Bus Socket.
+Apr 17 06:45:23 bs1-lab systemd[724]: Listening on GnuPG network certificate management daemon.
+Apr 17 06:45:23 bs1-lab systemd[724]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 17 06:45:23 bs1-lab systemd[724]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 17 06:45:23 bs1-lab systemd[724]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+Apr 17 06:45:23 bs1-lab systemd[724]: Listening on GnuPG cryptographic agent and passphrase cache.
+Apr 17 06:45:23 bs1-lab systemd[724]: Listening on Multimedia System.
+Apr 17 06:45:23 bs1-lab systemd[724]: Listening on debconf communication socket.
+Apr 17 06:45:23 bs1-lab systemd[724]: Listening on Sound System.
+Apr 17 06:45:23 bs1-lab systemd[724]: Listening on D-Bus User Message Bus Socket.
+Apr 17 06:45:23 bs1-lab systemd[724]: Reached target Sockets.
+Apr 17 06:45:23 bs1-lab systemd[724]: Reached target Basic System.
+Apr 17 06:45:23 bs1-lab systemd[1]: Started User Manager for UID 1000.
+Apr 17 06:45:23 bs1-lab systemd[1]: Started Session 2 of user tux.
+Apr 17 06:45:23 bs1-lab systemd[724]: Started Multimedia Service.
+Apr 17 06:45:23 bs1-lab systemd[724]: Starting Sound Service...
+Apr 17 06:45:23 bs1-lab pipewire[744]: could not set nice-level to -11: Permission denied
+Apr 17 06:45:23 bs1-lab systemd[724]: Started D-Bus User Message Bus.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab pipewire[744]: could not make thread realtime: Permission denied
+Apr 17 06:45:23 bs1-lab pipewire[744]: Failed to receive portal pid: org.freedesktop.DBus.Error.NameHasNoOwner: Could not get PID of name 'org.freedesktop.portal.Desktop': no such name
+Apr 17 06:45:23 bs1-lab pipewire-media-session[753]: could not set nice-level to -11: Permission denied
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab pipewire-media-session[753]: could not make thread realtime: Permission denied
+Apr 17 06:45:23 bs1-lab pulseaudio[745]: Disabling timer-based scheduling because running inside a VM.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab pulseaudio[745]: Disabling timer-based scheduling because running inside a VM.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab rtkit-daemon[679]: Supervising 7 threads of 3 processes of 2 users.
+Apr 17 06:45:23 bs1-lab systemd[724]: Started Sound Service.
+Apr 17 06:45:23 bs1-lab systemd[724]: Reached target Main User Target.
+Apr 17 06:45:23 bs1-lab systemd[724]: Startup finished in 254ms.
+Apr 17 06:45:25 bs1-lab systemd[1]: systemd-hostnamed.service: Succeeded.
+Apr 17 06:45:42 bs1-lab sudo[769]:      tux : TTY=pts/0 ; PWD=/home/tux ; USER=root ; COMMAND=/usr/bin/less /var/log/syslog
+Apr 17 06:45:42 bs1-lab sudo[769]: pam_unix(sudo:session): session opened for user root(uid=0) by tux(uid=1000)
+Apr 17 06:46:33 bs1-lab sudo[769]: pam_unix(sudo:session): session closed for user root
+Apr 17 06:46:38 bs1-lab sudo[771]:      tux : TTY=pts/0 ; PWD=/home/tux ; USER=root ; COMMAND=/usr/bin/journalctl
+Apr 17 06:46:38 bs1-lab sudo[771]: pam_unix(sudo:session): session opened for user root(uid=0) by tux(uid=1000)
+Apr 17 06:47:01 bs1-lab CRON[774]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Apr 17 06:47:01 bs1-lab CRON[775]: (root) CMD (test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly ))
+Apr 17 06:47:01 bs1-lab CRON[774]: pam_unix(cron:session): session closed for user root
+Apr 17 06:48:27 bs1-lab sudo[771]: pam_unix(sudo:session): session closed for user root
+Apr 17 06:48:45 bs1-lab sudo[776]:      tux : TTY=pts/0 ; PWD=/home/tux ; USER=root ; COMMAND=/usr/bin/journalctl
+Apr 17 06:48:45 bs1-lab sudo[776]: pam_unix(sudo:session): session opened for user root(uid=0) by tux(uid=1000)
+Apr 17 06:48:45 bs1-lab sudo[776]: pam_unix(sudo:session): session closed for user root
+Apr 17 06:48:49 bs1-lab sudo[779]:      tux : TTY=pts/0 ; PWD=/home/tux ; USER=root ; COMMAND=/usr/bin/journalctl
+Apr 17 06:48:49 bs1-lab sudo[779]: pam_unix(sudo:session): session opened for user root(uid=0) by tux(uid=1000)
+Apr 17 06:48:50 bs1-lab sudo[779]: pam_unix(sudo:session): session closed for user root
+Apr 17 06:48:59 bs1-lab sudo[783]:      tux : TTY=pts/0 ; PWD=/home/tux ; USER=root ; COMMAND=/usr/bin/journalctl
+Apr 17 06:48:59 bs1-lab sudo[783]: pam_unix(sudo:session): session opened for user root(uid=0) by tux(uid=1000)
