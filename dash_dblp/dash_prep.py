@@ -42,11 +42,11 @@ def get_data(keyword):
         # print(xml)
 
         # XML temporär speichern
-        f = open("dashmyxmlfile_temp.xml", "wb")
+        f = open("dash_data/xml_api_temp.xml", "wb")
         f.write(xml)
         f.close()
 
-        for _, elem in context_iter('myxmlfile_temp.xml'):
+        for _, elem in context_iter("dash_data/xml_api_temp.xml"):
 
             if elem.tag == 'hits':
                 for item in elem.attrib.items():
@@ -67,7 +67,7 @@ def get_data(keyword):
     cols = ["Year", "Count"]
     df = pd.DataFrame(key_counts, columns=cols)
     # print(df)
-    df.to_csv(f"{keyword}.csv")
+    df.to_csv(f"dash_data/{keyword}.csv")
     # with open(f"{keyword}.txt", "w") as f:
     #     f.write(str(key_counts))
 

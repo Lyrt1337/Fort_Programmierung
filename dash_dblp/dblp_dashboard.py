@@ -75,10 +75,10 @@ def update_graph(selected, key_value):
     keyword = key_value
     if keyword != "Select Keyword":
         try:
-            df = pd.read_csv(f"{keyword}.csv")
+            df = pd.read_csv(f"dash_data/{keyword}.csv")
         except:
             dash_prep.get_data(keyword)
-            df = pd.read_csv(f"{keyword}.csv")
+            df = pd.read_csv(f"dash_data/{keyword}.csv")
 
         dff = df.copy()
         dff = dff[dff["Year"] >= selected[0]]

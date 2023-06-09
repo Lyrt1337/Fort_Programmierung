@@ -1,0 +1,30 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.intro {
+    font-weight: bold;
+}
+
+.movies {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.movies tr:first-child {
+    background-color: chocolate;
+    color:wheat;
+}
+
+.movies tr:nth-child(2n) {
+    background-color: coral;
+}
+
+.movies tr:nth-child(2n) {
+    background-color: khaki;
+}
+
+hr {
+    color: chocolate;
+}
