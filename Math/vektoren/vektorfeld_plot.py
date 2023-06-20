@@ -6,7 +6,7 @@ pl.close("all")
 # Parameter
 fig = 1
 sc = 18
-aw = 0.005
+lw = 0.005
 
 x_0 = -6
 x_E = 6
@@ -14,17 +14,18 @@ x_E = 6
 y_0 = -3
 y_E = 3
 
-N_x = 13
-N_y = 13
+N_x = 14
+N_y = 9
+
 
 # Funktionen
-def v(x,y):
-    v_x = 1/(np.sqrt(x**2 + y**2))*y
-    v_y = 1/(np.sqrt(x**2 + y**2))*x
+def v(x, y):
+    v_x = y/(np.sqrt(x**2 + y**2))
+    v_y = x/(np.sqrt(x**2 + y**2))
     return v_x, v_y
 
-# Daten
 
+# Daten
 x_data = np.linspace(x_0, x_E, N_x)
 y_data = np.linspace(y_0, y_E, N_y)
 [x_grid, y_grid] = np.meshgrid(x_data, y_data)
@@ -38,8 +39,9 @@ y_data = np.linspace(y_0, y_E, N_y)
 # print(v_x_grid)
 # print(v_y_grid)
 fh = pl.figure(fig)
-pl.quiver(x_grid, y_grid, v_x_grid, v_y_grid, scale = sc, width = aw)
+pl.quiver(x_grid, y_grid, v_x_grid, v_y_grid, scale=sc, width=lw)
 pl.xlabel("$x$")
 pl.ylabel("$y$")
 pl.grid("on")
 pl.axis("tight")
+pl.show()
