@@ -6,6 +6,7 @@ with open("heidi.md", "r", encoding="utf-8") as f:
 
 # print(heidi_data)
 
+# Zähle Wort Heidi
 print(len(re.findall("Heidi", heidi_data)))
 
 # alle Buchstaben
