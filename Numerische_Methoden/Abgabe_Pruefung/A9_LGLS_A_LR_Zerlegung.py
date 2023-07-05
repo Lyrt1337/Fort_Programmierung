@@ -1,6 +1,6 @@
 """
 -------------------------
-Numerik Prüfung A9 LGLS a)
+Numerik Prüfung A9 LGLS a) LR- Zerlegung
 Autor: Christian Gilomen
 Datum: 30.06.2023
 -------------------------

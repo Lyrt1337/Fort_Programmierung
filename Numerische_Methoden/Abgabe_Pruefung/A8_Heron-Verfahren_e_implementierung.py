@@ -1,10 +1,10 @@
 # Parameter :
-q = 2.
+q = 7.
 a_0 = 1.
 pr = 16
 # Funktionen ;
 def f(x):
-    y = 0.5 * (x+q/x)
+    y = (2 - q * x) * x
     return y
 
 
@@ -24,5 +24,5 @@ while a != w:
 print(f"a_{k} = {a :#.16g}")
 # Ausgabe :
 print("--------------------------------------------------")
-print(f"Wurzel : sqrt ({q:#.{pr}g}) = {a:#.{pr}g}")
+print(f"f({q:#.{pr}g}) = {a:#.{pr}g}")
 print("--------------------------------------------------")

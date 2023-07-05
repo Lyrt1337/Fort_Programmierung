@@ -1,13 +1,20 @@
+"""
+-------------------------
+Numerik Prüfung A8 Heron-Verfahren a) plot
+Autor: Christian Gilomen
+Datum: 30.06.2023
+-------------------------
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 # Parameter
 q = 4
-x_0 = -12
+x_0 = -5
 x_E = -x_0
 x_1 = -0.2
 x_2 = -x_1
 N = 100
-y_a = -6
+y_a = -4
 y_b = -y_a
 N_f = 201
 N_g = 3

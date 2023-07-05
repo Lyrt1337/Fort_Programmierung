@@ -11,7 +11,7 @@ pr = 7
 def f(x):
     # y = 1 - 1/5 * x
     # y = np.cos(x)
-    y = np.exp(-x)
+    y = (2 - q * x) * x
     return y
 
 

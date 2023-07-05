@@ -8,8 +8,8 @@ G = sp.Matrix([[2, 1, 0, 2, 6], [4, 2, 3, 3, 16], [-2, -1, 6, -4, 2],
 H = G.rref()
 # Ausgabe
 # dp.display(G, H[0])
-for i in H[0]:
-    print(H[:i])
+# for i in H[0]:
+#     print(H[:i])
 
 
-# dp.display(H[0])
+dp.display(H[0])
